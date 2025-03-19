@@ -39,10 +39,10 @@
             this.chkDiv = new System.Windows.Forms.CheckBox();
             this.chkOption = new System.Windows.Forms.CheckBox();
             this.pnlRadioGroup = new System.Windows.Forms.Panel();
-            this.rbtAdd = new System.Windows.Forms.RadioButton();
-            this.rbtSub = new System.Windows.Forms.RadioButton();
-            this.rbtMul = new System.Windows.Forms.RadioButton();
             this.rbtDiv = new System.Windows.Forms.RadioButton();
+            this.rbtMul = new System.Windows.Forms.RadioButton();
+            this.rbtSub = new System.Windows.Forms.RadioButton();
+            this.rbtAdd = new System.Windows.Forms.RadioButton();
             this.btnProcess01 = new System.Windows.Forms.Button();
             this.btnProcess02 = new System.Windows.Forms.Button();
             this.btnProcess03 = new System.Windows.Forms.Button();
@@ -155,27 +155,16 @@
             this.pnlRadioGroup.Size = new System.Drawing.Size(546, 51);
             this.pnlRadioGroup.TabIndex = 2;
             // 
-            // rbtAdd
+            // rbtDiv
             // 
-            this.rbtAdd.AutoSize = true;
-            this.rbtAdd.Location = new System.Drawing.Point(3, 14);
-            this.rbtAdd.Name = "rbtAdd";
-            this.rbtAdd.Size = new System.Drawing.Size(73, 19);
-            this.rbtAdd.TabIndex = 0;
-            this.rbtAdd.TabStop = true;
-            this.rbtAdd.Text = "더하기";
-            this.rbtAdd.UseVisualStyleBackColor = true;
-            // 
-            // rbtSub
-            // 
-            this.rbtSub.AutoSize = true;
-            this.rbtSub.Location = new System.Drawing.Point(117, 14);
-            this.rbtSub.Name = "rbtSub";
-            this.rbtSub.Size = new System.Drawing.Size(58, 19);
-            this.rbtSub.TabIndex = 1;
-            this.rbtSub.TabStop = true;
-            this.rbtSub.Text = "빼기";
-            this.rbtSub.UseVisualStyleBackColor = true;
+            this.rbtDiv.AutoSize = true;
+            this.rbtDiv.Location = new System.Drawing.Point(318, 14);
+            this.rbtDiv.Name = "rbtDiv";
+            this.rbtDiv.Size = new System.Drawing.Size(73, 19);
+            this.rbtDiv.TabIndex = 3;
+            this.rbtDiv.TabStop = true;
+            this.rbtDiv.Text = "나누기";
+            this.rbtDiv.UseVisualStyleBackColor = true;
             // 
             // rbtMul
             // 
@@ -188,16 +177,27 @@
             this.rbtMul.Text = "곱하기";
             this.rbtMul.UseVisualStyleBackColor = true;
             // 
-            // rbtDiv
+            // rbtSub
             // 
-            this.rbtDiv.AutoSize = true;
-            this.rbtDiv.Location = new System.Drawing.Point(318, 14);
-            this.rbtDiv.Name = "rbtDiv";
-            this.rbtDiv.Size = new System.Drawing.Size(73, 19);
-            this.rbtDiv.TabIndex = 3;
-            this.rbtDiv.TabStop = true;
-            this.rbtDiv.Text = "나누기";
-            this.rbtDiv.UseVisualStyleBackColor = true;
+            this.rbtSub.AutoSize = true;
+            this.rbtSub.Location = new System.Drawing.Point(117, 14);
+            this.rbtSub.Name = "rbtSub";
+            this.rbtSub.Size = new System.Drawing.Size(58, 19);
+            this.rbtSub.TabIndex = 1;
+            this.rbtSub.TabStop = true;
+            this.rbtSub.Text = "빼기";
+            this.rbtSub.UseVisualStyleBackColor = true;
+            // 
+            // rbtAdd
+            // 
+            this.rbtAdd.AutoSize = true;
+            this.rbtAdd.Location = new System.Drawing.Point(3, 14);
+            this.rbtAdd.Name = "rbtAdd";
+            this.rbtAdd.Size = new System.Drawing.Size(73, 19);
+            this.rbtAdd.TabIndex = 0;
+            this.rbtAdd.TabStop = true;
+            this.rbtAdd.Text = "더하기";
+            this.rbtAdd.UseVisualStyleBackColor = true;
             // 
             // btnProcess01
             // 
@@ -320,7 +320,6 @@
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(611, 138);
             this.lblResult.TabIndex = 9;
-            this.lblResult.Text = "label1";
             // 
             // Form1
             // 
