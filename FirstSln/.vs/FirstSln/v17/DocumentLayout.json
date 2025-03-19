@@ -9,10 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C2F23C8A-7C5B-4209-83DF-E48E8FF6345E}|FirstForm\\FirstForm.csproj|C:\\Users\\minic\\source\\repos\\FirstSln\\firstform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C2F23C8A-7C5B-4209-83DF-E48E8FF6345E}|FirstForm\\FirstForm.csproj|solutionrelative:firstform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFD17682-5937-4891-8956-7B05E094C733}|FirstApp\\FirstApp.csproj|C:\\Users\\minic\\source\\repos\\FirstSln\\firstapp\\start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFD17682-5937-4891-8956-7B05E094C733}|FirstApp\\FirstApp.csproj|solutionrelative:firstapp\\start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,18 +44,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T06:46:06.954Z",
               "EditorCaption": " [\uB514\uC790\uC778]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Start.cs",
-              "DocumentMoniker": "C:\\Users\\minic\\source\\repos\\FirstSln\\FirstApp\\Start.cs",
-              "RelativeDocumentMoniker": "FirstApp\\Start.cs",
-              "ToolTip": "C:\\Users\\minic\\source\\repos\\FirstSln\\FirstApp\\Start.cs",
-              "RelativeToolTip": "FirstApp\\Start.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T05:53:34.318Z"
             }
           ]
         }

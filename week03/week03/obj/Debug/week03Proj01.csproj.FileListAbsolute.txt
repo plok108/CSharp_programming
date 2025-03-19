@@ -1,0 +1,10 @@
+C:\Users\minic\source\repos\week03\week03\obj\Debug\week03Proj01.csproj.AssemblyReference.cache
+C:\Users\minic\source\repos\week03\week03\obj\Debug\week03.Form1.resources
+C:\Users\minic\source\repos\week03\week03\obj\Debug\week03.Properties.Resources.resources
+C:\Users\minic\source\repos\week03\week03\obj\Debug\week03Proj01.csproj.GenerateResource.cache
+C:\Users\minic\source\repos\week03\week03\obj\Debug\week03Proj01.csproj.CoreCompileInputs.cache
+C:\Users\minic\source\repos\week03\week03\bin\Debug\week03.exe.config
+C:\Users\minic\source\repos\week03\week03\bin\Debug\week03.exe
+C:\Users\minic\source\repos\week03\week03\bin\Debug\week03.pdb
+C:\Users\minic\source\repos\week03\week03\obj\Debug\week03.exe
+C:\Users\minic\source\repos\week03\week03\obj\Debug\week03.pdb
