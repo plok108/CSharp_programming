@@ -1,1 +1,30 @@
+# 빌드 출력
+bin/
+obj/
+
+# Visual studio 관련 파일들
 .vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet 패키지 캐시
+.nuget/
+*.nupkg
+
+#  ASP.NET Temporary Files
+TemporaryASP.NETFiles/
+
+# 로그 파일
+*.log
+
+# 디버그 관련 파일
+*.pdb
+*.cache
+*.tlog
+
+# 운영체제별 임시 파일들
+Thumbs.db
+.DS_Store
