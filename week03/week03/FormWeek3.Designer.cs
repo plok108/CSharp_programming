@@ -48,11 +48,11 @@
             this.btnProcess03 = new System.Windows.Forms.Button();
             this.btnProcess04 = new System.Windows.Forms.Button();
             this.btnProcess05 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnProcess06 = new System.Windows.Forms.Button();
+            this.btnProcess07 = new System.Windows.Forms.Button();
+            this.btnProcess08 = new System.Windows.Forms.Button();
+            this.btnProcess09 = new System.Windows.Forms.Button();
+            this.btnProcess10 = new System.Windows.Forms.Button();
             this.cmbBeverage = new System.Windows.Forms.ComboBox();
             this.chkIce = new System.Windows.Forms.CheckBox();
             this.lblResult = new System.Windows.Forms.Label();
@@ -143,6 +143,7 @@
             this.chkOption.TabIndex = 1;
             this.chkOption.Text = "ENG";
             this.chkOption.UseVisualStyleBackColor = true;
+            this.chkOption.CheckedChanged += new System.EventHandler(this.chkOption_CheckedChanged);
             // 
             // pnlRadioGroup
             // 
@@ -211,7 +212,7 @@
             // 
             // btnProcess02
             // 
-            this.btnProcess02.Location = new System.Drawing.Point(116, 176);
+            this.btnProcess02.Location = new System.Drawing.Point(116, 175);
             this.btnProcess02.Name = "btnProcess02";
             this.btnProcess02.Size = new System.Drawing.Size(75, 23);
             this.btnProcess02.TabIndex = 4;
@@ -227,6 +228,7 @@
             this.btnProcess03.TabIndex = 5;
             this.btnProcess03.Text = "연산3";
             this.btnProcess03.UseVisualStyleBackColor = true;
+            this.btnProcess03.Click += new System.EventHandler(this.btnProcess03_Click);
             // 
             // btnProcess04
             // 
@@ -236,6 +238,7 @@
             this.btnProcess04.TabIndex = 6;
             this.btnProcess04.Text = "연산4";
             this.btnProcess04.UseVisualStyleBackColor = true;
+            this.btnProcess04.Click += new System.EventHandler(this.btnProcess04_Click);
             // 
             // btnProcess05
             // 
@@ -246,50 +249,53 @@
             this.btnProcess05.Text = "연산5";
             this.btnProcess05.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnProcess06
             // 
-            this.button6.Location = new System.Drawing.Point(22, 219);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "button1";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnProcess06.Location = new System.Drawing.Point(22, 219);
+            this.btnProcess06.Name = "btnProcess06";
+            this.btnProcess06.Size = new System.Drawing.Size(75, 23);
+            this.btnProcess06.TabIndex = 3;
+            this.btnProcess06.Text = "얼마? 1";
+            this.btnProcess06.UseVisualStyleBackColor = true;
+            this.btnProcess06.Click += new System.EventHandler(this.btnProcess06_Click);
             // 
-            // button7
+            // btnProcess07
             // 
-            this.button7.Location = new System.Drawing.Point(116, 220);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "button2";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnProcess07.Location = new System.Drawing.Point(116, 220);
+            this.btnProcess07.Name = "btnProcess07";
+            this.btnProcess07.Size = new System.Drawing.Size(75, 23);
+            this.btnProcess07.TabIndex = 4;
+            this.btnProcess07.Text = "얼마? 2";
+            this.btnProcess07.UseVisualStyleBackColor = true;
+            this.btnProcess07.Click += new System.EventHandler(this.btnProcess07_Click);
             // 
-            // button8
+            // btnProcess08
             // 
-            this.button8.Location = new System.Drawing.Point(222, 221);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "button3";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnProcess08.Location = new System.Drawing.Point(222, 221);
+            this.btnProcess08.Name = "btnProcess08";
+            this.btnProcess08.Size = new System.Drawing.Size(75, 23);
+            this.btnProcess08.TabIndex = 5;
+            this.btnProcess08.Text = "얼마? 3";
+            this.btnProcess08.UseVisualStyleBackColor = true;
+            this.btnProcess08.Click += new System.EventHandler(this.btnProcess08_Click);
             // 
-            // button9
+            // btnProcess09
             // 
-            this.button9.Location = new System.Drawing.Point(323, 218);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "button4";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnProcess09.Location = new System.Drawing.Point(323, 218);
+            this.btnProcess09.Name = "btnProcess09";
+            this.btnProcess09.Size = new System.Drawing.Size(75, 23);
+            this.btnProcess09.TabIndex = 6;
+            this.btnProcess09.Text = "button4";
+            this.btnProcess09.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnProcess10
             // 
-            this.button10.Location = new System.Drawing.Point(441, 217);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "button5";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnProcess10.Location = new System.Drawing.Point(441, 217);
+            this.btnProcess10.Name = "btnProcess10";
+            this.btnProcess10.Size = new System.Drawing.Size(75, 23);
+            this.btnProcess10.TabIndex = 7;
+            this.btnProcess10.Text = "button5";
+            this.btnProcess10.UseVisualStyleBackColor = true;
             // 
             // cmbBeverage
             // 
@@ -328,14 +334,14 @@
             this.ClientSize = new System.Drawing.Size(689, 450);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.cmbBeverage);
-            this.Controls.Add(this.button10);
+            this.Controls.Add(this.btnProcess10);
             this.Controls.Add(this.btnProcess05);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.btnProcess09);
             this.Controls.Add(this.btnProcess04);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btnProcess08);
             this.Controls.Add(this.btnProcess03);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnProcess07);
+            this.Controls.Add(this.btnProcess06);
             this.Controls.Add(this.btnProcess02);
             this.Controls.Add(this.btnProcess01);
             this.Controls.Add(this.pnlRadioGroup);
@@ -381,11 +387,11 @@
         private System.Windows.Forms.Button btnProcess03;
         private System.Windows.Forms.Button btnProcess04;
         private System.Windows.Forms.Button btnProcess05;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnProcess06;
+        private System.Windows.Forms.Button btnProcess07;
+        private System.Windows.Forms.Button btnProcess08;
+        private System.Windows.Forms.Button btnProcess09;
+        private System.Windows.Forms.Button btnProcess10;
         private System.Windows.Forms.ComboBox cmbBeverage;
         private System.Windows.Forms.CheckBox chkIce;
         private System.Windows.Forms.Label lblResult;

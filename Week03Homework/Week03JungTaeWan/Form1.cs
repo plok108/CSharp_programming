@@ -10,12 +10,17 @@ using System.Windows.Forms;
 
 namespace Week03JungTaeWan
 {
-    public partial class Form1: Form
+    public partial class FormMain: Form
     {
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
         }
 
+        private void btnNumber_Click(object sender, EventArgs e)
+        {
+            Button target = (Button)sender;
+            lblNumbers.Text = target.Text;
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Week03JungTaeWan
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -53,7 +53,6 @@
             this.lblExpression.Name = "lblExpression";
             this.lblExpression.Size = new System.Drawing.Size(359, 53);
             this.lblExpression.TabIndex = 0;
-            this.lblExpression.Text = "lbl";
             this.lblExpression.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblNumbers
@@ -64,7 +63,6 @@
             this.lblNumbers.Name = "lblNumbers";
             this.lblNumbers.Size = new System.Drawing.Size(359, 55);
             this.lblNumbers.TabIndex = 1;
-            this.lblNumbers.Text = "label1";
             this.lblNumbers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnNum0
@@ -75,6 +73,7 @@
             this.btnNum0.TabIndex = 2;
             this.btnNum0.Text = "0";
             this.btnNum0.UseVisualStyleBackColor = true;
+            this.btnNum0.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnNum1
             // 
@@ -84,6 +83,7 @@
             this.btnNum1.TabIndex = 2;
             this.btnNum1.Text = "1";
             this.btnNum1.UseVisualStyleBackColor = true;
+            this.btnNum1.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnNum2
             // 
@@ -93,6 +93,7 @@
             this.btnNum2.TabIndex = 2;
             this.btnNum2.Text = "2";
             this.btnNum2.UseVisualStyleBackColor = true;
+            this.btnNum2.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnNum3
             // 
@@ -102,6 +103,7 @@
             this.btnNum3.TabIndex = 2;
             this.btnNum3.Text = "3";
             this.btnNum3.UseVisualStyleBackColor = true;
+            this.btnNum3.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnNum4
             // 
@@ -111,6 +113,7 @@
             this.btnNum4.TabIndex = 2;
             this.btnNum4.Text = "4";
             this.btnNum4.UseVisualStyleBackColor = true;
+            this.btnNum4.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnNum5
             // 
@@ -120,6 +123,7 @@
             this.btnNum5.TabIndex = 2;
             this.btnNum5.Text = "5";
             this.btnNum5.UseVisualStyleBackColor = true;
+            this.btnNum5.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnNum6
             // 
@@ -129,6 +133,7 @@
             this.btnNum6.TabIndex = 2;
             this.btnNum6.Text = "6";
             this.btnNum6.UseVisualStyleBackColor = true;
+            this.btnNum6.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnNum7
             // 
@@ -138,6 +143,7 @@
             this.btnNum7.TabIndex = 2;
             this.btnNum7.Text = "7";
             this.btnNum7.UseVisualStyleBackColor = true;
+            this.btnNum7.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnNum8
             // 
@@ -147,6 +153,7 @@
             this.btnNum8.TabIndex = 2;
             this.btnNum8.Text = "8";
             this.btnNum8.UseVisualStyleBackColor = true;
+            this.btnNum8.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnNum9
             // 
@@ -156,53 +163,54 @@
             this.btnNum9.TabIndex = 2;
             this.btnNum9.Text = "9";
             this.btnNum9.UseVisualStyleBackColor = true;
+            this.btnNum9.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnDiv
             // 
-            this.btnDiv.Location = new System.Drawing.Point(297, 192);
+            this.btnDiv.Location = new System.Drawing.Point(297, 180);
             this.btnDiv.Name = "btnDiv";
-            this.btnDiv.Size = new System.Drawing.Size(84, 45);
+            this.btnDiv.Size = new System.Drawing.Size(84, 57);
             this.btnDiv.TabIndex = 3;
             this.btnDiv.Text = "/";
             this.btnDiv.UseVisualStyleBackColor = true;
             // 
             // btnMul
             // 
-            this.btnMul.Location = new System.Drawing.Point(297, 255);
+            this.btnMul.Location = new System.Drawing.Point(297, 243);
             this.btnMul.Name = "btnMul";
-            this.btnMul.Size = new System.Drawing.Size(84, 45);
+            this.btnMul.Size = new System.Drawing.Size(84, 57);
             this.btnMul.TabIndex = 3;
             this.btnMul.Text = "*";
             this.btnMul.UseVisualStyleBackColor = true;
             // 
             // btnSub
             // 
-            this.btnSub.Location = new System.Drawing.Point(297, 312);
+            this.btnSub.Location = new System.Drawing.Point(297, 306);
             this.btnSub.Name = "btnSub";
-            this.btnSub.Size = new System.Drawing.Size(84, 45);
+            this.btnSub.Size = new System.Drawing.Size(84, 51);
             this.btnSub.TabIndex = 3;
             this.btnSub.Text = "-";
             this.btnSub.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(297, 381);
+            this.btnAdd.Location = new System.Drawing.Point(297, 369);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(84, 45);
+            this.btnAdd.Size = new System.Drawing.Size(84, 57);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnCal
             // 
-            this.btnCal.Location = new System.Drawing.Point(115, 381);
+            this.btnCal.Location = new System.Drawing.Point(115, 369);
             this.btnCal.Name = "btnCal";
-            this.btnCal.Size = new System.Drawing.Size(167, 45);
+            this.btnCal.Size = new System.Drawing.Size(167, 57);
             this.btnCal.TabIndex = 3;
             this.btnCal.Text = "=";
             this.btnCal.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,7 +232,7 @@
             this.Controls.Add(this.btnNum0);
             this.Controls.Add(this.lblNumbers);
             this.Controls.Add(this.lblExpression);
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.Text = "계산기";
             this.ResumeLayout(false);
 

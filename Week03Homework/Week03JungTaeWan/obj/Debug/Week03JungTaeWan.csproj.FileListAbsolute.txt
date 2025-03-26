@@ -2,9 +2,9 @@ C:\Users\minic\source\repos\Week03Homework\Week03JungTaeWan\bin\Debug\Week03Jung
 C:\Users\minic\source\repos\Week03Homework\Week03JungTaeWan\bin\Debug\Week03JungTaeWan.exe
 C:\Users\minic\source\repos\Week03Homework\Week03JungTaeWan\bin\Debug\Week03JungTaeWan.pdb
 C:\Users\minic\source\repos\Week03Homework\Week03JungTaeWan\obj\Debug\Week03JungTaeWan.csproj.AssemblyReference.cache
-C:\Users\minic\source\repos\Week03Homework\Week03JungTaeWan\obj\Debug\Week03JungTaeWan.Form1.resources
 C:\Users\minic\source\repos\Week03Homework\Week03JungTaeWan\obj\Debug\Week03JungTaeWan.Properties.Resources.resources
 C:\Users\minic\source\repos\Week03Homework\Week03JungTaeWan\obj\Debug\Week03JungTaeWan.csproj.GenerateResource.cache
 C:\Users\minic\source\repos\Week03Homework\Week03JungTaeWan\obj\Debug\Week03JungTaeWan.csproj.CoreCompileInputs.cache
 C:\Users\minic\source\repos\Week03Homework\Week03JungTaeWan\obj\Debug\Week03JungTaeWan.exe
 C:\Users\minic\source\repos\Week03Homework\Week03JungTaeWan\obj\Debug\Week03JungTaeWan.pdb
+C:\Users\minic\source\repos\Week03Homework\Week03JungTaeWan\obj\Debug\Week03JungTaeWan.FormMain.resources
