@@ -42,7 +42,6 @@
             this.lblDepartment = new System.Windows.Forms.Label();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.lblAdvisor = new System.Windows.Forms.Label();
-            this.tbxAdvisor = new System.Windows.Forms.TextBox();
             this.lblYear = new System.Windows.Forms.Label();
             this.cmbYear = new System.Windows.Forms.ComboBox();
             this.lblClass = new System.Windows.Forms.Label();
@@ -60,15 +59,16 @@
             this.lbxDictionary = new System.Windows.Forms.ListBox();
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tpgDepartment = new System.Windows.Forms.TabPage();
-            this.tpgProfessor = new System.Windows.Forms.TabPage();
-            this.tpgStudent = new System.Windows.Forms.TabPage();
+            this.lbxDepartment = new System.Windows.Forms.ListBox();
+            this.btnRemoveDepartment = new System.Windows.Forms.Button();
+            this.btnRegisterDepartment = new System.Windows.Forms.Button();
             this.lblDepartmentCode = new System.Windows.Forms.Label();
             this.tbxDepartmentCode = new System.Windows.Forms.TextBox();
             this.tbxDepartmentName = new System.Windows.Forms.TextBox();
             this.lblDepartmentName = new System.Windows.Forms.Label();
-            this.lbxDepartment = new System.Windows.Forms.ListBox();
-            this.btnRegisterDepartment = new System.Windows.Forms.Button();
-            this.btnRemoveDepartment = new System.Windows.Forms.Button();
+            this.tpgProfessor = new System.Windows.Forms.TabPage();
+            this.lblProfessorDepartment = new System.Windows.Forms.Label();
+            this.cmbProfessorDepartment = new System.Windows.Forms.ComboBox();
             this.lbxProfessor = new System.Windows.Forms.ListBox();
             this.btnRemoveProfessor = new System.Windows.Forms.Button();
             this.btnRegisterProfessor = new System.Windows.Forms.Button();
@@ -76,12 +76,42 @@
             this.tbxProfessorNumber = new System.Windows.Forms.TextBox();
             this.tbxProfessorName = new System.Windows.Forms.TextBox();
             this.lblProfessorName = new System.Windows.Forms.Label();
-            this.lblProfessorDepartment = new System.Windows.Forms.Label();
-            this.cmbProfessorDepartment = new System.Windows.Forms.ComboBox();
+            this.tpgStudent = new System.Windows.Forms.TabPage();
+            this.cmbAdvisor = new System.Windows.Forms.ComboBox();
+            this.tpgTestScore = new System.Windows.Forms.TabPage();
+            this.btnTestRegScore = new System.Windows.Forms.Button();
+            this.btnTestSearchStudent = new System.Windows.Forms.Button();
+            this.lblTestCourse9Title = new System.Windows.Forms.Label();
+            this.lblTestCourse6Title = new System.Windows.Forms.Label();
+            this.lblTestCourse3Title = new System.Windows.Forms.Label();
+            this.lblTestCourse8Title = new System.Windows.Forms.Label();
+            this.lblTestCourse5Title = new System.Windows.Forms.Label();
+            this.lblTestCourse2Title = new System.Windows.Forms.Label();
+            this.lblTestCourse7Title = new System.Windows.Forms.Label();
+            this.lblTestCourse4Title = new System.Windows.Forms.Label();
+            this.lblTestCourse1Title = new System.Windows.Forms.Label();
+            this.tbxTestScore9 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore6 = new System.Windows.Forms.TextBox();
+            this.lblTestNumberTitle = new System.Windows.Forms.Label();
+            this.tbxTestScore8 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore5 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore3 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore7 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore4 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore2 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore1 = new System.Windows.Forms.TextBox();
+            this.tbxTestNumber = new System.Windows.Forms.TextBox();
+            this.lblTestAverage = new System.Windows.Forms.Label();
+            this.lblTestAverageTitle = new System.Windows.Forms.Label();
+            this.lblTestTotalCount = new System.Windows.Forms.Label();
+            this.lblTestTotalCountTitle = new System.Windows.Forms.Label();
+            this.lblTestName = new System.Windows.Forms.Label();
+            this.lblTestNameTitle = new System.Windows.Forms.Label();
             this.tabMain.SuspendLayout();
             this.tpgDepartment.SuspendLayout();
             this.tpgProfessor.SuspendLayout();
             this.tpgStudent.SuspendLayout();
+            this.tpgTestScore.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNumber
@@ -148,7 +178,7 @@
             this.lblBirthMonth.Name = "lblBirthMonth";
             this.lblBirthMonth.Size = new System.Drawing.Size(22, 15);
             this.lblBirthMonth.TabIndex = 0;
-            this.lblBirthMonth.Text = "년";
+            this.lblBirthMonth.Text = "월";
             // 
             // tbxBirthMonth
             // 
@@ -164,7 +194,7 @@
             this.lblBirthDay.Name = "lblBirthDay";
             this.lblBirthDay.Size = new System.Drawing.Size(22, 15);
             this.lblBirthDay.TabIndex = 0;
-            this.lblBirthDay.Text = "년";
+            this.lblBirthDay.Text = "일";
             // 
             // tbxBirthDay
             // 
@@ -184,11 +214,13 @@
             // 
             // cmbDepartment
             // 
+            this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartment.FormattingEnabled = true;
             this.cmbDepartment.Location = new System.Drawing.Point(117, 96);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(331, 23);
             this.cmbDepartment.TabIndex = 2;
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
             // 
             // lblAdvisor
             // 
@@ -198,13 +230,6 @@
             this.lblAdvisor.Size = new System.Drawing.Size(67, 15);
             this.lblAdvisor.TabIndex = 0;
             this.lblAdvisor.Text = "지도교수";
-            // 
-            // tbxAdvisor
-            // 
-            this.tbxAdvisor.Location = new System.Drawing.Point(117, 136);
-            this.tbxAdvisor.Name = "tbxAdvisor";
-            this.tbxAdvisor.Size = new System.Drawing.Size(331, 25);
-            this.tbxAdvisor.TabIndex = 1;
             // 
             // lblYear
             // 
@@ -217,6 +242,7 @@
             // 
             // cmbYear
             // 
+            this.cmbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYear.FormattingEnabled = true;
             this.cmbYear.Location = new System.Drawing.Point(117, 176);
             this.cmbYear.Name = "cmbYear";
@@ -234,6 +260,7 @@
             // 
             // cmbClass
             // 
+            this.cmbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbClass.FormattingEnabled = true;
             this.cmbClass.Location = new System.Drawing.Point(348, 176);
             this.cmbClass.Name = "cmbClass";
@@ -251,6 +278,7 @@
             // 
             // cmbRegStatus
             // 
+            this.cmbRegStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRegStatus.FormattingEnabled = true;
             this.cmbRegStatus.Location = new System.Drawing.Point(117, 214);
             this.cmbRegStatus.Name = "cmbRegStatus";
@@ -297,6 +325,7 @@
             this.btnNew.TabIndex = 3;
             this.btnNew.Text = "신규";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnRegister
             // 
@@ -306,6 +335,7 @@
             this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "등록";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // lbxArray
             // 
@@ -333,12 +363,14 @@
             this.lbxDictionary.Name = "lbxDictionary";
             this.lbxDictionary.Size = new System.Drawing.Size(177, 124);
             this.lbxDictionary.TabIndex = 4;
+            this.lbxDictionary.SelectedIndexChanged += new System.EventHandler(this.lbxDictionary_SelectedIndexChanged);
             // 
             // tabMain
             // 
             this.tabMain.Controls.Add(this.tpgDepartment);
             this.tabMain.Controls.Add(this.tpgProfessor);
             this.tabMain.Controls.Add(this.tpgStudent);
+            this.tabMain.Controls.Add(this.tpgTestScore);
             this.tabMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabMain.ItemSize = new System.Drawing.Size(64, 30);
             this.tabMain.Location = new System.Drawing.Point(0, 0);
@@ -365,64 +397,34 @@
             this.tpgDepartment.Text = "학과정보";
             this.tpgDepartment.UseVisualStyleBackColor = true;
             // 
-            // tpgProfessor
+            // lbxDepartment
             // 
-            this.tpgProfessor.Controls.Add(this.lblProfessorDepartment);
-            this.tpgProfessor.Controls.Add(this.cmbProfessorDepartment);
-            this.tpgProfessor.Controls.Add(this.lbxProfessor);
-            this.tpgProfessor.Controls.Add(this.btnRemoveProfessor);
-            this.tpgProfessor.Controls.Add(this.btnRegisterProfessor);
-            this.tpgProfessor.Controls.Add(this.lblProfessorNumber);
-            this.tpgProfessor.Controls.Add(this.tbxProfessorNumber);
-            this.tpgProfessor.Controls.Add(this.tbxProfessorName);
-            this.tpgProfessor.Controls.Add(this.lblProfessorName);
-            this.tpgProfessor.Location = new System.Drawing.Point(4, 34);
-            this.tpgProfessor.Name = "tpgProfessor";
-            this.tpgProfessor.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgProfessor.Size = new System.Drawing.Size(674, 425);
-            this.tpgProfessor.TabIndex = 1;
-            this.tpgProfessor.Text = "교수정보";
-            this.tpgProfessor.UseVisualStyleBackColor = true;
+            this.lbxDepartment.FormattingEnabled = true;
+            this.lbxDepartment.ItemHeight = 15;
+            this.lbxDepartment.Location = new System.Drawing.Point(27, 93);
+            this.lbxDepartment.Name = "lbxDepartment";
+            this.lbxDepartment.Size = new System.Drawing.Size(639, 229);
+            this.lbxDepartment.TabIndex = 7;
             // 
-            // tpgStudent
+            // btnRemoveDepartment
             // 
-            this.tpgStudent.Controls.Add(this.lblNumber);
-            this.tpgStudent.Controls.Add(this.lbxDictionary);
-            this.tpgStudent.Controls.Add(this.tbxNumber);
-            this.tpgStudent.Controls.Add(this.lbxList);
-            this.tpgStudent.Controls.Add(this.lblBirth);
-            this.tpgStudent.Controls.Add(this.lbxArray);
-            this.tpgStudent.Controls.Add(this.lblBirthYear);
-            this.tpgStudent.Controls.Add(this.btnRegister);
-            this.tpgStudent.Controls.Add(this.lblAdvisor);
-            this.tpgStudent.Controls.Add(this.btnNew);
-            this.tpgStudent.Controls.Add(this.lblDepartment);
-            this.tpgStudent.Controls.Add(this.cmbClass);
-            this.tpgStudent.Controls.Add(this.lblAddress);
-            this.tpgStudent.Controls.Add(this.cmbRegStatus);
-            this.tpgStudent.Controls.Add(this.lblBirthMonth);
-            this.tpgStudent.Controls.Add(this.cmbYear);
-            this.tpgStudent.Controls.Add(this.lblContact);
-            this.tpgStudent.Controls.Add(this.cmbDepartment);
-            this.tpgStudent.Controls.Add(this.lblYear);
-            this.tpgStudent.Controls.Add(this.tbxName);
-            this.tpgStudent.Controls.Add(this.lblBirthDay);
-            this.tpgStudent.Controls.Add(this.lblName);
-            this.tpgStudent.Controls.Add(this.lblRegStatus);
-            this.tpgStudent.Controls.Add(this.tbxBirthDay);
-            this.tpgStudent.Controls.Add(this.lblClass);
-            this.tpgStudent.Controls.Add(this.tbxBirthMonth);
-            this.tpgStudent.Controls.Add(this.tbxBirthYear);
-            this.tpgStudent.Controls.Add(this.tbxContact);
-            this.tpgStudent.Controls.Add(this.tbxAdvisor);
-            this.tpgStudent.Controls.Add(this.tbxAddress);
-            this.tpgStudent.Location = new System.Drawing.Point(4, 34);
-            this.tpgStudent.Name = "tpgStudent";
-            this.tpgStudent.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgStudent.Size = new System.Drawing.Size(674, 425);
-            this.tpgStudent.TabIndex = 2;
-            this.tpgStudent.Text = "학생정보";
-            this.tpgStudent.UseVisualStyleBackColor = true;
+            this.btnRemoveDepartment.Location = new System.Drawing.Point(568, 345);
+            this.btnRemoveDepartment.Name = "btnRemoveDepartment";
+            this.btnRemoveDepartment.Size = new System.Drawing.Size(77, 63);
+            this.btnRemoveDepartment.TabIndex = 6;
+            this.btnRemoveDepartment.Text = "삭제";
+            this.btnRemoveDepartment.UseVisualStyleBackColor = true;
+            this.btnRemoveDepartment.Click += new System.EventHandler(this.btnRemoveDepartment_Click);
+            // 
+            // btnRegisterDepartment
+            // 
+            this.btnRegisterDepartment.Location = new System.Drawing.Point(234, 13);
+            this.btnRegisterDepartment.Name = "btnRegisterDepartment";
+            this.btnRegisterDepartment.Size = new System.Drawing.Size(77, 63);
+            this.btnRegisterDepartment.TabIndex = 6;
+            this.btnRegisterDepartment.Text = "등록";
+            this.btnRegisterDepartment.UseVisualStyleBackColor = true;
+            this.btnRegisterDepartment.Click += new System.EventHandler(this.btnRegisterDepartment_Click);
             // 
             // lblDepartmentCode
             // 
@@ -457,34 +459,43 @@
             this.lblDepartmentName.TabIndex = 3;
             this.lblDepartmentName.Text = "학과이름";
             // 
-            // lbxDepartment
+            // tpgProfessor
             // 
-            this.lbxDepartment.FormattingEnabled = true;
-            this.lbxDepartment.ItemHeight = 15;
-            this.lbxDepartment.Location = new System.Drawing.Point(27, 93);
-            this.lbxDepartment.Name = "lbxDepartment";
-            this.lbxDepartment.Size = new System.Drawing.Size(639, 229);
-            this.lbxDepartment.TabIndex = 7;
+            this.tpgProfessor.Controls.Add(this.lblProfessorDepartment);
+            this.tpgProfessor.Controls.Add(this.cmbProfessorDepartment);
+            this.tpgProfessor.Controls.Add(this.lbxProfessor);
+            this.tpgProfessor.Controls.Add(this.btnRemoveProfessor);
+            this.tpgProfessor.Controls.Add(this.btnRegisterProfessor);
+            this.tpgProfessor.Controls.Add(this.lblProfessorNumber);
+            this.tpgProfessor.Controls.Add(this.tbxProfessorNumber);
+            this.tpgProfessor.Controls.Add(this.tbxProfessorName);
+            this.tpgProfessor.Controls.Add(this.lblProfessorName);
+            this.tpgProfessor.Location = new System.Drawing.Point(4, 34);
+            this.tpgProfessor.Name = "tpgProfessor";
+            this.tpgProfessor.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgProfessor.Size = new System.Drawing.Size(674, 425);
+            this.tpgProfessor.TabIndex = 1;
+            this.tpgProfessor.Text = "교수정보";
+            this.tpgProfessor.UseVisualStyleBackColor = true;
             // 
-            // btnRegisterDepartment
+            // lblProfessorDepartment
             // 
-            this.btnRegisterDepartment.Location = new System.Drawing.Point(234, 13);
-            this.btnRegisterDepartment.Name = "btnRegisterDepartment";
-            this.btnRegisterDepartment.Size = new System.Drawing.Size(77, 63);
-            this.btnRegisterDepartment.TabIndex = 6;
-            this.btnRegisterDepartment.Text = "등록";
-            this.btnRegisterDepartment.UseVisualStyleBackColor = true;
-            this.btnRegisterDepartment.Click += new System.EventHandler(this.btnRegisterDepartment_Click);
+            this.lblProfessorDepartment.AutoSize = true;
+            this.lblProfessorDepartment.Location = new System.Drawing.Point(24, 17);
+            this.lblProfessorDepartment.Name = "lblProfessorDepartment";
+            this.lblProfessorDepartment.Size = new System.Drawing.Size(67, 15);
+            this.lblProfessorDepartment.TabIndex = 15;
+            this.lblProfessorDepartment.Text = "소속학과";
             // 
-            // btnRemoveDepartment
+            // cmbProfessorDepartment
             // 
-            this.btnRemoveDepartment.Location = new System.Drawing.Point(568, 345);
-            this.btnRemoveDepartment.Name = "btnRemoveDepartment";
-            this.btnRemoveDepartment.Size = new System.Drawing.Size(77, 63);
-            this.btnRemoveDepartment.TabIndex = 6;
-            this.btnRemoveDepartment.Text = "삭제";
-            this.btnRemoveDepartment.UseVisualStyleBackColor = true;
-            this.btnRemoveDepartment.Click += new System.EventHandler(this.btnRemoveDepartment_Click);
+            this.cmbProfessorDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProfessorDepartment.FormattingEnabled = true;
+            this.cmbProfessorDepartment.Location = new System.Drawing.Point(116, 14);
+            this.cmbProfessorDepartment.Name = "cmbProfessorDepartment";
+            this.cmbProfessorDepartment.Size = new System.Drawing.Size(331, 23);
+            this.cmbProfessorDepartment.TabIndex = 16;
+            this.cmbProfessorDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbProfessorDepartment_SelectedIndexChanged);
             // 
             // lbxProfessor
             // 
@@ -503,6 +514,7 @@
             this.btnRemoveProfessor.TabIndex = 12;
             this.btnRemoveProfessor.Text = "삭제";
             this.btnRemoveProfessor.UseVisualStyleBackColor = true;
+            this.btnRemoveProfessor.Click += new System.EventHandler(this.btnRemoveProfessor_Click);
             // 
             // btnRegisterProfessor
             // 
@@ -512,6 +524,7 @@
             this.btnRegisterProfessor.TabIndex = 13;
             this.btnRegisterProfessor.Text = "등록";
             this.btnRegisterProfessor.UseVisualStyleBackColor = true;
+            this.btnRegisterProfessor.Click += new System.EventHandler(this.btnRegisterProfessor_Click);
             // 
             // lblProfessorNumber
             // 
@@ -546,24 +559,366 @@
             this.lblProfessorName.TabIndex = 9;
             this.lblProfessorName.Text = "교수이름";
             // 
-            // lblProfessorDepartment
+            // tpgStudent
             // 
-            this.lblProfessorDepartment.AutoSize = true;
-            this.lblProfessorDepartment.Location = new System.Drawing.Point(24, 17);
-            this.lblProfessorDepartment.Name = "lblProfessorDepartment";
-            this.lblProfessorDepartment.Size = new System.Drawing.Size(67, 15);
-            this.lblProfessorDepartment.TabIndex = 15;
-            this.lblProfessorDepartment.Text = "소속학과";
+            this.tpgStudent.Controls.Add(this.cmbAdvisor);
+            this.tpgStudent.Controls.Add(this.lblNumber);
+            this.tpgStudent.Controls.Add(this.lbxDictionary);
+            this.tpgStudent.Controls.Add(this.tbxNumber);
+            this.tpgStudent.Controls.Add(this.lbxList);
+            this.tpgStudent.Controls.Add(this.lblBirth);
+            this.tpgStudent.Controls.Add(this.lbxArray);
+            this.tpgStudent.Controls.Add(this.lblBirthYear);
+            this.tpgStudent.Controls.Add(this.btnRegister);
+            this.tpgStudent.Controls.Add(this.lblAdvisor);
+            this.tpgStudent.Controls.Add(this.btnNew);
+            this.tpgStudent.Controls.Add(this.lblDepartment);
+            this.tpgStudent.Controls.Add(this.cmbClass);
+            this.tpgStudent.Controls.Add(this.lblAddress);
+            this.tpgStudent.Controls.Add(this.cmbRegStatus);
+            this.tpgStudent.Controls.Add(this.lblBirthMonth);
+            this.tpgStudent.Controls.Add(this.cmbYear);
+            this.tpgStudent.Controls.Add(this.lblContact);
+            this.tpgStudent.Controls.Add(this.cmbDepartment);
+            this.tpgStudent.Controls.Add(this.lblYear);
+            this.tpgStudent.Controls.Add(this.tbxName);
+            this.tpgStudent.Controls.Add(this.lblBirthDay);
+            this.tpgStudent.Controls.Add(this.lblName);
+            this.tpgStudent.Controls.Add(this.lblRegStatus);
+            this.tpgStudent.Controls.Add(this.tbxBirthDay);
+            this.tpgStudent.Controls.Add(this.lblClass);
+            this.tpgStudent.Controls.Add(this.tbxBirthMonth);
+            this.tpgStudent.Controls.Add(this.tbxBirthYear);
+            this.tpgStudent.Controls.Add(this.tbxContact);
+            this.tpgStudent.Controls.Add(this.tbxAddress);
+            this.tpgStudent.Location = new System.Drawing.Point(4, 34);
+            this.tpgStudent.Name = "tpgStudent";
+            this.tpgStudent.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgStudent.Size = new System.Drawing.Size(674, 425);
+            this.tpgStudent.TabIndex = 2;
+            this.tpgStudent.Text = "학생정보";
+            this.tpgStudent.UseVisualStyleBackColor = true;
             // 
-            // cmbProfessorDepartment
+            // cmbAdvisor
             // 
-            this.cmbProfessorDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbProfessorDepartment.FormattingEnabled = true;
-            this.cmbProfessorDepartment.Location = new System.Drawing.Point(116, 14);
-            this.cmbProfessorDepartment.Name = "cmbProfessorDepartment";
-            this.cmbProfessorDepartment.Size = new System.Drawing.Size(331, 23);
-            this.cmbProfessorDepartment.TabIndex = 16;
-            this.cmbProfessorDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbProfessorDepartment_SelectedIndexChanged);
+            this.cmbAdvisor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAdvisor.FormattingEnabled = true;
+            this.cmbAdvisor.Location = new System.Drawing.Point(117, 138);
+            this.cmbAdvisor.Name = "cmbAdvisor";
+            this.cmbAdvisor.Size = new System.Drawing.Size(331, 23);
+            this.cmbAdvisor.TabIndex = 5;
+            // 
+            // tpgTestScore
+            // 
+            this.tpgTestScore.Controls.Add(this.btnTestRegScore);
+            this.tpgTestScore.Controls.Add(this.btnTestSearchStudent);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse9Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse6Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse3Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse8Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse5Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse2Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse7Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse4Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse1Title);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore9);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore6);
+            this.tpgTestScore.Controls.Add(this.lblTestNumberTitle);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore8);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore5);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore3);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore7);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore4);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore2);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore1);
+            this.tpgTestScore.Controls.Add(this.tbxTestNumber);
+            this.tpgTestScore.Controls.Add(this.lblTestAverage);
+            this.tpgTestScore.Controls.Add(this.lblTestAverageTitle);
+            this.tpgTestScore.Controls.Add(this.lblTestTotalCount);
+            this.tpgTestScore.Controls.Add(this.lblTestTotalCountTitle);
+            this.tpgTestScore.Controls.Add(this.lblTestName);
+            this.tpgTestScore.Controls.Add(this.lblTestNameTitle);
+            this.tpgTestScore.Location = new System.Drawing.Point(4, 34);
+            this.tpgTestScore.Name = "tpgTestScore";
+            this.tpgTestScore.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgTestScore.Size = new System.Drawing.Size(674, 425);
+            this.tpgTestScore.TabIndex = 3;
+            this.tpgTestScore.Text = "성적처리(TEST)";
+            this.tpgTestScore.UseVisualStyleBackColor = true;
+            // 
+            // btnTestRegScore
+            // 
+            this.btnTestRegScore.Location = new System.Drawing.Point(301, 344);
+            this.btnTestRegScore.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTestRegScore.Name = "btnTestRegScore";
+            this.btnTestRegScore.Size = new System.Drawing.Size(75, 60);
+            this.btnTestRegScore.TabIndex = 41;
+            this.btnTestRegScore.Text = "수정 및 완료";
+            this.btnTestRegScore.UseVisualStyleBackColor = true;
+            this.btnTestRegScore.Click += new System.EventHandler(this.btnTestRegScore_Click);
+            // 
+            // btnTestSearchStudent
+            // 
+            this.btnTestSearchStudent.Location = new System.Drawing.Point(301, 22);
+            this.btnTestSearchStudent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTestSearchStudent.Name = "btnTestSearchStudent";
+            this.btnTestSearchStudent.Size = new System.Drawing.Size(75, 60);
+            this.btnTestSearchStudent.TabIndex = 40;
+            this.btnTestSearchStudent.Text = "검색";
+            this.btnTestSearchStudent.UseVisualStyleBackColor = true;
+            this.btnTestSearchStudent.Click += new System.EventHandler(this.btnTestSearchStudent_Click);
+            // 
+            // lblTestCourse9Title
+            // 
+            this.lblTestCourse9Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse9Title.Location = new System.Drawing.Point(19, 378);
+            this.lblTestCourse9Title.Name = "lblTestCourse9Title";
+            this.lblTestCourse9Title.Size = new System.Drawing.Size(128, 26);
+            this.lblTestCourse9Title.TabIndex = 15;
+            this.lblTestCourse9Title.Text = "과목 9";
+            this.lblTestCourse9Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse6Title
+            // 
+            this.lblTestCourse6Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse6Title.Location = new System.Drawing.Point(19, 276);
+            this.lblTestCourse6Title.Name = "lblTestCourse6Title";
+            this.lblTestCourse6Title.Size = new System.Drawing.Size(128, 26);
+            this.lblTestCourse6Title.TabIndex = 16;
+            this.lblTestCourse6Title.Text = "과목 6";
+            this.lblTestCourse6Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse3Title
+            // 
+            this.lblTestCourse3Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse3Title.Location = new System.Drawing.Point(19, 173);
+            this.lblTestCourse3Title.Name = "lblTestCourse3Title";
+            this.lblTestCourse3Title.Size = new System.Drawing.Size(128, 26);
+            this.lblTestCourse3Title.TabIndex = 17;
+            this.lblTestCourse3Title.Text = "과목 3";
+            this.lblTestCourse3Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse8Title
+            // 
+            this.lblTestCourse8Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse8Title.Location = new System.Drawing.Point(19, 344);
+            this.lblTestCourse8Title.Name = "lblTestCourse8Title";
+            this.lblTestCourse8Title.Size = new System.Drawing.Size(128, 26);
+            this.lblTestCourse8Title.TabIndex = 18;
+            this.lblTestCourse8Title.Text = "과목 8";
+            this.lblTestCourse8Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse5Title
+            // 
+            this.lblTestCourse5Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse5Title.Location = new System.Drawing.Point(19, 243);
+            this.lblTestCourse5Title.Name = "lblTestCourse5Title";
+            this.lblTestCourse5Title.Size = new System.Drawing.Size(128, 26);
+            this.lblTestCourse5Title.TabIndex = 19;
+            this.lblTestCourse5Title.Text = "과목 5";
+            this.lblTestCourse5Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse2Title
+            // 
+            this.lblTestCourse2Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse2Title.Location = new System.Drawing.Point(19, 139);
+            this.lblTestCourse2Title.Name = "lblTestCourse2Title";
+            this.lblTestCourse2Title.Size = new System.Drawing.Size(128, 26);
+            this.lblTestCourse2Title.TabIndex = 20;
+            this.lblTestCourse2Title.Text = "과목 2";
+            this.lblTestCourse2Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse7Title
+            // 
+            this.lblTestCourse7Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse7Title.Location = new System.Drawing.Point(19, 310);
+            this.lblTestCourse7Title.Name = "lblTestCourse7Title";
+            this.lblTestCourse7Title.Size = new System.Drawing.Size(128, 26);
+            this.lblTestCourse7Title.TabIndex = 21;
+            this.lblTestCourse7Title.Text = "과목 7";
+            this.lblTestCourse7Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse4Title
+            // 
+            this.lblTestCourse4Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse4Title.Location = new System.Drawing.Point(19, 209);
+            this.lblTestCourse4Title.Name = "lblTestCourse4Title";
+            this.lblTestCourse4Title.Size = new System.Drawing.Size(128, 26);
+            this.lblTestCourse4Title.TabIndex = 22;
+            this.lblTestCourse4Title.Text = "과목 4";
+            this.lblTestCourse4Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse1Title
+            // 
+            this.lblTestCourse1Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse1Title.Location = new System.Drawing.Point(19, 105);
+            this.lblTestCourse1Title.Name = "lblTestCourse1Title";
+            this.lblTestCourse1Title.Size = new System.Drawing.Size(128, 26);
+            this.lblTestCourse1Title.TabIndex = 23;
+            this.lblTestCourse1Title.Text = "과목 1";
+            this.lblTestCourse1Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tbxTestScore9
+            // 
+            this.tbxTestScore9.Location = new System.Drawing.Point(167, 379);
+            this.tbxTestScore9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxTestScore9.Name = "tbxTestScore9";
+            this.tbxTestScore9.Size = new System.Drawing.Size(114, 25);
+            this.tbxTestScore9.TabIndex = 29;
+            this.tbxTestScore9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore6
+            // 
+            this.tbxTestScore6.Location = new System.Drawing.Point(167, 278);
+            this.tbxTestScore6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxTestScore6.Name = "tbxTestScore6";
+            this.tbxTestScore6.Size = new System.Drawing.Size(114, 25);
+            this.tbxTestScore6.TabIndex = 31;
+            this.tbxTestScore6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblTestNumberTitle
+            // 
+            this.lblTestNumberTitle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestNumberTitle.Location = new System.Drawing.Point(18, 20);
+            this.lblTestNumberTitle.Name = "lblTestNumberTitle";
+            this.lblTestNumberTitle.Size = new System.Drawing.Size(128, 26);
+            this.lblTestNumberTitle.TabIndex = 14;
+            this.lblTestNumberTitle.Text = "학번";
+            this.lblTestNumberTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tbxTestScore8
+            // 
+            this.tbxTestScore8.Location = new System.Drawing.Point(167, 345);
+            this.tbxTestScore8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxTestScore8.Name = "tbxTestScore8";
+            this.tbxTestScore8.Size = new System.Drawing.Size(114, 25);
+            this.tbxTestScore8.TabIndex = 30;
+            this.tbxTestScore8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore5
+            // 
+            this.tbxTestScore5.Location = new System.Drawing.Point(167, 244);
+            this.tbxTestScore5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxTestScore5.Name = "tbxTestScore5";
+            this.tbxTestScore5.Size = new System.Drawing.Size(114, 25);
+            this.tbxTestScore5.TabIndex = 33;
+            this.tbxTestScore5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore3
+            // 
+            this.tbxTestScore3.Location = new System.Drawing.Point(167, 174);
+            this.tbxTestScore3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxTestScore3.Name = "tbxTestScore3";
+            this.tbxTestScore3.Size = new System.Drawing.Size(114, 25);
+            this.tbxTestScore3.TabIndex = 28;
+            this.tbxTestScore3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore7
+            // 
+            this.tbxTestScore7.Location = new System.Drawing.Point(167, 312);
+            this.tbxTestScore7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxTestScore7.Name = "tbxTestScore7";
+            this.tbxTestScore7.Size = new System.Drawing.Size(114, 25);
+            this.tbxTestScore7.TabIndex = 27;
+            this.tbxTestScore7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore4
+            // 
+            this.tbxTestScore4.Location = new System.Drawing.Point(167, 210);
+            this.tbxTestScore4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxTestScore4.Name = "tbxTestScore4";
+            this.tbxTestScore4.Size = new System.Drawing.Size(114, 25);
+            this.tbxTestScore4.TabIndex = 26;
+            this.tbxTestScore4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore2
+            // 
+            this.tbxTestScore2.Location = new System.Drawing.Point(167, 140);
+            this.tbxTestScore2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxTestScore2.Name = "tbxTestScore2";
+            this.tbxTestScore2.Size = new System.Drawing.Size(114, 25);
+            this.tbxTestScore2.TabIndex = 25;
+            this.tbxTestScore2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore1
+            // 
+            this.tbxTestScore1.Location = new System.Drawing.Point(167, 106);
+            this.tbxTestScore1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxTestScore1.Name = "tbxTestScore1";
+            this.tbxTestScore1.Size = new System.Drawing.Size(114, 25);
+            this.tbxTestScore1.TabIndex = 24;
+            this.tbxTestScore1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestNumber
+            // 
+            this.tbxTestNumber.Location = new System.Drawing.Point(167, 22);
+            this.tbxTestNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxTestNumber.Name = "tbxTestNumber";
+            this.tbxTestNumber.Size = new System.Drawing.Size(114, 25);
+            this.tbxTestNumber.TabIndex = 32;
+            // 
+            // lblTestAverage
+            // 
+            this.lblTestAverage.BackColor = System.Drawing.Color.White;
+            this.lblTestAverage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTestAverage.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestAverage.Location = new System.Drawing.Point(542, 379);
+            this.lblTestAverage.Name = "lblTestAverage";
+            this.lblTestAverage.Size = new System.Drawing.Size(114, 26);
+            this.lblTestAverage.TabIndex = 39;
+            this.lblTestAverage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestAverageTitle
+            // 
+            this.lblTestAverageTitle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestAverageTitle.Location = new System.Drawing.Point(394, 378);
+            this.lblTestAverageTitle.Name = "lblTestAverageTitle";
+            this.lblTestAverageTitle.Size = new System.Drawing.Size(128, 26);
+            this.lblTestAverageTitle.TabIndex = 36;
+            this.lblTestAverageTitle.Text = "평균";
+            this.lblTestAverageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestTotalCount
+            // 
+            this.lblTestTotalCount.BackColor = System.Drawing.Color.White;
+            this.lblTestTotalCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTestTotalCount.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestTotalCount.Location = new System.Drawing.Point(542, 348);
+            this.lblTestTotalCount.Name = "lblTestTotalCount";
+            this.lblTestTotalCount.Size = new System.Drawing.Size(114, 26);
+            this.lblTestTotalCount.TabIndex = 34;
+            this.lblTestTotalCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestTotalCountTitle
+            // 
+            this.lblTestTotalCountTitle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestTotalCountTitle.Location = new System.Drawing.Point(394, 346);
+            this.lblTestTotalCountTitle.Name = "lblTestTotalCountTitle";
+            this.lblTestTotalCountTitle.Size = new System.Drawing.Size(128, 26);
+            this.lblTestTotalCountTitle.TabIndex = 35;
+            this.lblTestTotalCountTitle.Text = "총과목";
+            this.lblTestTotalCountTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestName
+            // 
+            this.lblTestName.BackColor = System.Drawing.Color.White;
+            this.lblTestName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTestName.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestName.Location = new System.Drawing.Point(166, 55);
+            this.lblTestName.Name = "lblTestName";
+            this.lblTestName.Size = new System.Drawing.Size(114, 26);
+            this.lblTestName.TabIndex = 38;
+            this.lblTestName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestNameTitle
+            // 
+            this.lblTestNameTitle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestNameTitle.Location = new System.Drawing.Point(18, 54);
+            this.lblTestNameTitle.Name = "lblTestNameTitle";
+            this.lblTestNameTitle.Size = new System.Drawing.Size(128, 26);
+            this.lblTestNameTitle.TabIndex = 37;
+            this.lblTestNameTitle.Text = "이름";
+            this.lblTestNameTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormManager
             // 
@@ -580,6 +935,8 @@
             this.tpgProfessor.PerformLayout();
             this.tpgStudent.ResumeLayout(false);
             this.tpgStudent.PerformLayout();
+            this.tpgTestScore.ResumeLayout(false);
+            this.tpgTestScore.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -600,7 +957,6 @@
         private System.Windows.Forms.Label lblDepartment;
         private System.Windows.Forms.ComboBox cmbDepartment;
         private System.Windows.Forms.Label lblAdvisor;
-        private System.Windows.Forms.TextBox tbxAdvisor;
         private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.ComboBox cmbYear;
         private System.Windows.Forms.Label lblClass;
@@ -636,6 +992,36 @@
         private System.Windows.Forms.TextBox tbxProfessorNumber;
         private System.Windows.Forms.TextBox tbxProfessorName;
         private System.Windows.Forms.Label lblProfessorName;
+        private System.Windows.Forms.ComboBox cmbAdvisor;
+        private System.Windows.Forms.TabPage tpgTestScore;
+        private System.Windows.Forms.Button btnTestRegScore;
+        private System.Windows.Forms.Button btnTestSearchStudent;
+        private System.Windows.Forms.Label lblTestCourse9Title;
+        private System.Windows.Forms.Label lblTestCourse6Title;
+        private System.Windows.Forms.Label lblTestCourse3Title;
+        private System.Windows.Forms.Label lblTestCourse8Title;
+        private System.Windows.Forms.Label lblTestCourse5Title;
+        private System.Windows.Forms.Label lblTestCourse2Title;
+        private System.Windows.Forms.Label lblTestCourse7Title;
+        private System.Windows.Forms.Label lblTestCourse4Title;
+        private System.Windows.Forms.Label lblTestCourse1Title;
+        private System.Windows.Forms.TextBox tbxTestScore9;
+        private System.Windows.Forms.TextBox tbxTestScore6;
+        private System.Windows.Forms.Label lblTestNumberTitle;
+        private System.Windows.Forms.TextBox tbxTestScore8;
+        private System.Windows.Forms.TextBox tbxTestScore5;
+        private System.Windows.Forms.TextBox tbxTestScore3;
+        private System.Windows.Forms.TextBox tbxTestScore7;
+        private System.Windows.Forms.TextBox tbxTestScore4;
+        private System.Windows.Forms.TextBox tbxTestScore2;
+        private System.Windows.Forms.TextBox tbxTestScore1;
+        private System.Windows.Forms.TextBox tbxTestNumber;
+        private System.Windows.Forms.Label lblTestAverage;
+        private System.Windows.Forms.Label lblTestAverageTitle;
+        private System.Windows.Forms.Label lblTestTotalCount;
+        private System.Windows.Forms.Label lblTestTotalCountTitle;
+        private System.Windows.Forms.Label lblTestName;
+        private System.Windows.Forms.Label lblTestNameTitle;
     }
 }
 
